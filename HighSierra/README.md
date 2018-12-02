@@ -111,6 +111,16 @@ set Device Manager -> OVMF Platform Configuration -> Change Preferred Resolution
 for Next Boot to 1024x768 . Commit changes and exit the OVMF menu. 
 Relaunch the `boot-macOS-HS.sh` script.
 
+Note: If you changed desired resolution and buit `Clover.qcov2` file you probably
+need to make changes in `boot-macOS-HS.sh` file line:
+```
+-drive if=pflash,format=raw,file=OVMF_VARS-pure-efi-1024x768.fd
+```
+with
+```
+-drive if=pflash,format=raw,file=OVMF_VARS-pure-efi.fd
+```
+
 #### Installer Steps
 
 * After booting, the initial language selection should show up.

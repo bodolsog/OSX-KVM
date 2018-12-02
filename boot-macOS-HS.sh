@@ -13,7 +13,7 @@
 
 MY_OPTIONS="+aes,+xsave,+avx,+xsaveopt,avx2,+smep"
 
-qemu-system-x86_64 -enable-kvm -m 3072 -cpu Penryn,kvm=on,vendor=GenuineIntel,+invtsc,vmware-cpuid-freq=on,$MY_OPTIONS\
+qemu-system-x86_64 -enable-kvm -m 4096 -cpu Penryn,kvm=on,vendor=GenuineIntel,+invtsc,vmware-cpuid-freq=on,$MY_OPTIONS\
 	  -machine pc-q35-2.9 \
 	  -smp 4,cores=2 \
 	  -usb -device usb-kbd -device usb-tablet \
